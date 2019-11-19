@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.srv.main.service.dao.MessageDao">
+
+
+    <insert id="insertTbMsg" parameterType="com.srv.main.vo.TbMsgVO">
+        INSERT INTO TB_MSG (MSG_ID, APP_ID, TOKEN, TITLE, CONTENTS, MSG_STATUS, REG_DT)
+                    VALUES(#{msgId}, #{appId}, #{token}, #{title}, #{contents}, #{msgStatus}, NOW())
+    </insert>
+
+
+</mapper>
